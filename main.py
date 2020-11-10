@@ -18,7 +18,7 @@ model_AE.addConstrs(quicksum(profesor_i_en_clase_j[i, j] for i in range(clases))
 
 objetive_function = quicksum(quicksum(preferences[i][j] * profesor_i_en_clase_j[i, j] for i in range(5)) for j in range(5))
 model_AE.setObjective(objetive_function, GRB.MAXIMIZE)
-
+print("hola mundito")print("hola mundito")print("hola mundito")
 model_AE.write("asignacion.lp")
 model_AE.optimize()
 if model_AE.SolCount > 0:
